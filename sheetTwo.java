@@ -81,16 +81,22 @@ public class sheetTwo {
 
     if (frontRight < 35 || frontRight > 45) {
       System.out.println("The pressure of the front right tire is not within the recommended range.");
+      inflatedOk = false;
     } else if (frontLeft < 35 || frontLeft > 45) {
       System.out.println("The pressure of the front left tire is not within the recommended range.");
+      inflatedOk = false;
     } else if (rearRight < 35 || rearRight > 45) {
       System.out.println("The pressure of the rear right tire is not within the recommended range.");
+      inflatedOk = false;
     } else if (rearLeft < 35 || rearLeft > 45) {
       System.out.println("The pressure of the rear left tire is not within the recommended range.");
+      inflatedOk = false;
     } else if (Math.abs(frontRight - frontLeft > 3)) {
       System.out.println("The pressure difference between the front right and front left tires is more than 3 psi.");
+      inflatedOk = false;
     } else if (Math.abs(rearRight - rearLeft > 3)) {
       System.out.println("The pressure difference between the rear right and rear left tires is more than 3 psi.");
+      inflatedOk = false;
     }
 
     System.out.println(inflatedOk ? "The tire inflation is OK" : "Make a tire checkup please.");
